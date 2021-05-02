@@ -1,0 +1,16 @@
+current directory: /Users/kondoshun/Desktop/N2i/Childcare/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
+/Users/kondoshun/.rbenv/versions/2.6.6/bin/ruby -I /Users/kondoshun/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210503-99937-13334oo.rb extconf.rb
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/kondoshun/Desktop/N2i/Childcare/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /Users/kondoshun/Desktop/N2i/Childcare/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/kondoshun/Desktop/N2i/Childcare/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20210503-99937-u7g7zd/racc
