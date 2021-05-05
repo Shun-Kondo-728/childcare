@@ -1,0 +1,87 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// mixin
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+// 全ページ共通
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+// header
+header {
+    height: 200px;
+    img {
+        height: 150px;
+        width: 600px;
+    }
+}
+.navbar ul{
+  margin: 12px 0;
+}
+
+ #logo  {
+  float: left;
+  margin: 10px 0;
+}
+
+// footer
+footer {
+  margin-top: 45px;
+  padding-top: 30px;
+  border-top: 1px solid #eaeaea ;
+  color: #777 ;
+  small {
+    float: center;
+  }
+  .copylight {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding: 65px 40px 0 0;
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  
+  // header
+  header img {
+    height: 100px;
+    width: 550px;
+    padding-left: 70px;
+  }
+
+  .navbar-nav > li > a {
+    padding: 35px 70px 0 0;
+    font-size: 24px;
+  }
+
+  // footer
+  footer .copylight {
+    font-size: 20px;
+  }
+}
