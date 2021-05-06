@@ -1,2 +1,10 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div class="img-list">
+  <div class="img-item">
+    <%= image_tag asset_path("ノート.jpg"), class: "note" %>
+    <h2><li><%= link_to '離乳食メモ', root_path, class: "link-color" %></li></h2>
+  </div>
+  <div class="img-item">
+    <%= image_tag asset_path("カレンダー.jpg"), class: "calendar" %>
+    <h3><li><%= link_to '離乳食カレンダー', root_path, class: "link-color" %></li></h3>
+  </div>
+</div>
