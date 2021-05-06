@@ -28,6 +28,32 @@ textarea {
   }
 }
 
+// error_message
+input, textarea, select, .uneditable-input {
+    border: 1px solid #bbb ;
+    width: 100%;
+    margin-bottom: 15px;
+    @include box_sizing;
+  }
+  
+  input {
+    height: auto !important;
+  }
+   #error_explanation  {
+    color: red;
+    ul {
+      color: red;
+      margin: 0 0 30px 0;
+    }
+  }
+  
+  .field_with_errors {
+    @extend .has-error;
+    .form-control {
+      color: $state-danger-text;
+    }
+  }
+
 // header
 header {
     height: 200px;
@@ -115,6 +141,56 @@ footer {
   width: 90%;
 }
 
+// signup
+.signup-block {
+    height: 1500px;
+    position: relative; 
+    .signup-group {
+      height: 1200px;
+      width: 90%;
+      margin: 0;
+      border-radius: 30px;
+      background-color: #fff;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -45%);
+  }
+    .sign-title {
+      font-size: 70px;
+      font-weight: bold;
+      padding: 120px 0 60px 0;
+      text-align: center;
+      color: lightcoral;
+    }
+    .form-control {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+    label {
+      max-width: 100%;
+      font-size: 50px;
+      padding: 25px 0 20px 80px;
+    }
+    .actions {
+      text-align: center;
+    }
+    .btn-primary {
+      font-size: 65px;
+      width: 300px;
+      height: 150px;
+      color: #fff;
+      background-color: lightcoral;
+      border-color: lightcoral;
+      margin: 100px 0 30px 0;
+      border-radius: 20px;
+      padding: 20px;
+    }
+  }
+
 @media screen and (min-width: 768px) {
   .navbar-nav > li > a {
     padding: 65px 40px 0 0;
@@ -174,5 +250,35 @@ footer {
   .calendar {
     padding: 0 15% 0 0;
     height: 500px;
+  }
+
+  // signup
+  .signup-block {
+    height: 550px;
+    position: relative; 
+    .signup-group {
+      height: 650px;
+      width: 700px;
+      transform: translate(-50%, -47%);
+    }
+    .sign-title {
+      font-size: 30px;
+      padding: 60px 0 10px 0;
+    }
+    .form-control {
+      width: 60%;
+      padding: 5px 0;
+    }
+    label {
+      font-size: 20px;
+      padding: 15px 0 10px 130px;
+    }
+    .btn-primary {
+      font-size: 25px;
+      width: 300px;
+      height: 60px;
+      margin-top: 40px;
+      padding: 0;
+    }
   }
 }
