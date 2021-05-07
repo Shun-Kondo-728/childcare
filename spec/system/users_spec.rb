@@ -26,7 +26,7 @@ RSpec.describe "Users", type: :system do
         click_button "登録"
         expect(page).to have_content "りにゅーしょく。へようこそ！"
       end
-   
+
       it "無効なユーザーで新規登録を行うと新規登録失敗のエラーが表示されること" do
         fill_in "名前", with: ""
         fill_in "パスワード", with: "password"

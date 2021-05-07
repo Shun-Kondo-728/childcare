@@ -20,6 +20,12 @@ RSpec.describe User, type: :model do
       expect(user.errors[:name]).to include("は30文字以内で入力してください")
     end
 
+    it "重複した名前なら無効な状態であること" do
+      other_user = build(:user, name: user.name)
+      other_user.valid?
+      expect(other_user.errors[:name]).to include("はすでに存在します")
+    end
+
     it "パスワードがなければ無効な状態であること" do
       user = build(:user, password: nil, password_confirmation: nil)
       user.valid?
