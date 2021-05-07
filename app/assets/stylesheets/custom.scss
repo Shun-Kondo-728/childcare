@@ -56,10 +56,10 @@ input, textarea, select, .uneditable-input {
 
 // header
 header {
-    height: 200px;
+    height: 100px;
     img {
-        height: 150px;
-        width: 600px;
+        height: 100px;
+        width: 400px;
     }
 }
 .navbar ul{
@@ -67,7 +67,6 @@ header {
 }
 
  #logo  {
-  float: left;
   margin: 10px 0;
 }
 
@@ -81,7 +80,7 @@ footer {
     float: center;
   }
   .copylight {
-    font-size: 30px;
+    font-size: 20px;
   }
 }
 
@@ -141,6 +140,36 @@ footer {
   width: 90%;
 }
 
+.top-layout {
+    padding: 300px 0;
+    text-align: center;
+}
+
+.message {
+    padding-bottom: 50px;
+    font-weight: bold;
+    color: lightcoral;
+    font-size: 30px;
+}
+
+.comment {
+    font-size: 20px;
+    color: lightcoral;
+    padding-bottom: 50px;
+}
+
+.go {
+    text-align: center;
+    .btn-primary {
+        padding: 10px;
+        font-size: 20px;
+        background: skyblue;
+        border-color: skyblue;
+        margin-bottom: 50px;
+        width: 60%;
+    }
+  }
+
 // signup // login
 .signup-block {
     height: 1500px;
@@ -197,9 +226,49 @@ footer {
   }
 
 @media screen and (min-width: 768px) {
+// header
+header {
+    height: 200px;
+    img {
+        height: 150px;
+        width: 600px;
+    }
+}
+
+ #logo  {
+  float: left;
+}
+
+// footer
+footer {
+  .copylight {
+    font-size: 30px;
+  }
+}
   .navbar-nav > li > a {
     padding: 65px 40px 0 0;
-    font-size: 25px;
+    font-size: 35px;
+  }
+
+  .top-layout {
+    padding: 500px 0;
+}
+
+.message {
+    font-size: 60px;
+}
+
+.comment {
+    font-size: 30px;
+    padding-bottom: 100px;
+}
+
+.go {
+    .btn-primary {
+        padding: 40px;
+        font-size: 50px;
+        width: 80%;
+    }
   }
 }
 
@@ -217,7 +286,7 @@ footer {
 
   .navbar-nav > li > a {
     padding: 35px 70px 0 0;
-    font-size: 24px;
+    font-size: 25px;
   }
 
   // footer
@@ -260,6 +329,25 @@ footer {
     height: 500px;
   }
 
+  .top-layout {
+    padding: 50px 0 100px 0;
+}
+
+  .message {
+    font-size: 40px;
+}
+
+.comment {
+    font-size: 25px;
+}
+
+  .go {
+    .btn-primary {
+      padding: 20px;
+      font-size: 30px;
+      width: 50%;
+    }
+}
   // signup
   .signup-block {
     height: 550px;

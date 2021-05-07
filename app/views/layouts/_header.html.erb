@@ -2,12 +2,12 @@
    <%= link_to(image_tag("りにゅーしょく。.png", :alt => ""), root_url, id: 'logo') %>
    <nav>
      <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to 'りにゅーしょく。の使い方', about_path %></li>
+      <li><%= link_to 'りにゅーしょく。の使い方', about_path, class: "header-link" %></li>
       <% if logged_in? %>
-        <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+        <li><%= link_to 'ログアウト', logout_path, method: :delete, class: "header-link" %></li>
       <% else %>
-        <li><%= link_to 'ユーザー登録', signup_path %></li>
-        <li><%= link_to 'ログイン', login_path %></li>
+        <li><%= link_to 'ユーザー登録', signup_path, class: "header-link" %></li>
+        <li><%= link_to 'ログイン', login_path, class: "header-link" %></li>
       <% end %>
      </ul>
    </nav>
