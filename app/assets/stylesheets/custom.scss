@@ -141,7 +141,7 @@ footer {
   width: 90%;
 }
 
-// signup
+// signup // login
 .signup-block {
     height: 1500px;
     position: relative; 
@@ -191,6 +191,11 @@ footer {
     }
   }
 
+  .guide {
+    text-align: center;
+    font-size: 30px;
+  }
+
 @media screen and (min-width: 768px) {
   .navbar-nav > li > a {
     padding: 65px 40px 0 0;
@@ -201,10 +206,13 @@ footer {
 @media screen and (min-width: 1024px) {
   
   // header
-  header img {
-    height: 100px;
-    width: 550px;
-    padding-left: 70px;
+  header {
+    height: 250px; 
+    img {
+      height: 100px;
+      width: 550px;
+      padding-left: 70px;
+    }
   }
 
   .navbar-nav > li > a {
@@ -280,5 +288,9 @@ footer {
       margin-top: 40px;
       padding: 0;
     }
+  }
+
+  .guide {
+    font-size: 20px;
   }
 }
