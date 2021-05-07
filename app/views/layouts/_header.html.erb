@@ -3,8 +3,12 @@
    <nav>
      <ul class="nav navbar-nav navbar-right">
       <li><%= link_to 'りにゅーしょく。の使い方', about_path %></li>
-      <li><%= link_to 'ユーザー登録', signup_path %></li>
-      <li><%= link_to 'ログイン', login_path %></li>
+      <% if logged_in? %>
+        <li><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to 'ユーザー登録', signup_path %></li>
+        <li><%= link_to 'ログイン', login_path %></li>
+      <% end %>
      </ul>
    </nav>
 </header>
