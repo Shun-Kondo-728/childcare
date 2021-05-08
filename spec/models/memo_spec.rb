@@ -1,5 +1,35 @@
 require 'rails_helper'
 
 RSpec.describe Memo, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let!(:memo) { create(:memo) }
+
+  context "バリデーション" do
+    it "有効な状態であること" do
+      expect(memo).to be_valid
+    end
+
+    it "離乳食名がなければ無効な状態であること" do
+      memo = build(:memo, name: nil)
+      memo.valid?
+      expect(memo.errors[:name]).to include("を入力してください")
+    end
+
+    it "離乳食名が20文字以内であること" do
+      memo = build(:memo, name: "あ" * 21)
+      memo.valid?
+      expect(memo.errors[:name]).to include("は20文字以内で入力してください")
+    end
+
+    it "作り方が60文字以内であること" do
+      memo = build(:memo, description: "あ" * 61)
+      memo.valid?
+      expect(memo.errors[:description]).to include("は60文字以内で入力してください")
+    end
+
+    it "ユーザーIDがなければ無効な状態であること" do
+      memo = build(:memo, user_id: nil)
+      memo.valid?
+      expect(memo.errors[:user_id]).to include("を入力してください")
+    end
+  end
 end

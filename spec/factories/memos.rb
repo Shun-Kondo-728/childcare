@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :memo do
-    name "MyString"
-    description "MyText"
-    user nil
+    name { "離乳食" }
+    description { "このやり方で作ります。" }
+    association :user
   end
 end
