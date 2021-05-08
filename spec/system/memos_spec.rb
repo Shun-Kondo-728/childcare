@@ -22,8 +22,13 @@ RSpec.describe "Memos", type: :system do
         end
       end
 
-      it "鈴風色メモのページネーションが表示されていること" do
+      it "離乳食メモのページネーションが表示されていること" do
         expect(page).to have_css "nav.pagination"
+      end
+
+      it "「メモする」が表示されること" do
+        visit memos_path
+        expect(page).to have_link "メモする", href: new_memo_path
       end
     end
   end
