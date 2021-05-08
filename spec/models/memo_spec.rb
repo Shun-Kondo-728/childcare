@@ -2,6 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Memo, type: :model do
   let!(:memo) { create(:memo) }
+  let!(:memo_yesterday) { create(:memo, :yesterday) }
+  let!(:memo_one_week_ago) { create(:memo, :one_week_ago) }
+  let!(:memo_one_month_ago) { create(:memo, :one_month_ago) }
 
   context "バリデーション" do
     it "有効な状態であること" do
@@ -30,6 +33,12 @@ RSpec.describe Memo, type: :model do
       memo = build(:memo, user_id: nil)
       memo.valid?
       expect(memo.errors[:user_id]).to include("を入力してください")
+    end
+  end
+
+  context "作成日時の並び順" do
+    it "最新の投稿が最初になっていること" do
+      expect(memo).to eq Memo.first
     end
   end
 end
