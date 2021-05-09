@@ -38,6 +38,18 @@ class MemosController < ApplicationController
     end
   end
 
+  def destroy
+    @memo = Memo.find(params[:id])
+    if current_user?(@memo.user)
+      @memo.destroy
+      flash[:success] = "離乳食メモが削除されました"
+      redirect_to request.referrer == user_url(@memo.user) ? user_url(@memo.user) : memos_url
+    else
+      flash[:danger] = "他のアカウントの離乳食メモは削除できません"
+      redirect_to root_url
+    end
+  end
+
   private
 
     def memo_params

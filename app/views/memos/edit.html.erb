@@ -16,7 +16,12 @@
 
       <div class="actions">  
         <%=f.submit '更新する', class: "btn btn-primary"%>
-      </div> 
+      </div>
+
+      <div class="memo-delete">
+        <%= link_to "離乳食メモを削除する", memo_path(@memo), method: :delete,
+                             data: { confirm: "本当にこの離乳食メモを削除してもよろしいですか？" } %>
+      </div>  
     <% end %>
   </div>
 </div>
