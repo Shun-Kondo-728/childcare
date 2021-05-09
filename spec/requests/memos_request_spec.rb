@@ -21,7 +21,7 @@ RSpec.describe "Memos", type: :request do
                                            description: "ここをこうやって作ります。" } }
       }.to change(Memo, :count).by(1)
       follow_redirect!
-      expect(response).to render_template('memos/index')
+      expect(response).to render_template('memos/show')
     end
 
     it "無効なデータでは登録できないこと" do

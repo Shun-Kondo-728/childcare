@@ -1,0 +1,8 @@
+<% provide(:title, "#{@memo.name}") %>
+
+<div class="container">
+  <div class="memo-show">
+    <h2 class="memos-name"><%= @memo.name %></h2>
+    <h4 class="memos-description"><%= simple_format(@memo.description) %></h4>
+  </div>
+</div>

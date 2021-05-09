@@ -65,4 +65,22 @@ RSpec.describe "Memos", type: :system do
       end
     end
   end
+
+  describe "離乳食メモ詳細ページ" do
+    context "ページレイアウト" do
+      before do
+        login_for_system(user)
+        visit memo_path(memo)
+      end
+
+      it "正しいタイトルが表示されること" do
+        expect(page).to have_title full_title("#{memo.name}")
+      end
+
+      it "メモの情報が表示されること" do
+        expect(page).to have_content memo.name
+        expect(page).to have_content memo.description
+      end
+    end
+  end
 end

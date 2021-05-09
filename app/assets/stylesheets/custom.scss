@@ -266,6 +266,22 @@ footer {
     margin-left: 5%;
 }
 
+.memos-name {
+    padding: 200px 0 70px 0;
+    font-size: 40px;
+    display: block;
+    word-break: break-all;
+}
+
+.memos-description {
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 400;
+    margin-bottom: 70px;
+    display: block;
+    word-break: break-all;
+}
+
 @media screen and (min-width: 768px) {
 // header
 header {
@@ -403,6 +419,15 @@ footer {
         background-color: skyblue;
         border-color: skyblue;
     }
+}
+
+.memos-name {
+    font-size: 60px;
+}
+
+.memos-description {
+    font-size: 45px;
+    line-height: 70px;
 }
 @media screen and (min-width: 1024px) {
   
@@ -562,4 +587,22 @@ footer {
         padding: 20px;
       }
   }
+
+  .m-memo { 
+      padding-top: 0;
+      .btn-record1 {
+        padding: 15px 40px;
+        font-size: 40px;
+    }
+  }
+
+  .memos-name {
+    padding: 0 0 70px 0;
+    font-size: 60px;
+}
+
+  .memos-description {
+    font-size: 35px;
+    line-height: 70px;
+}
 }

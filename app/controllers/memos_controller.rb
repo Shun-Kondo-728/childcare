@@ -5,6 +5,10 @@ class MemosController < ApplicationController
     @feed_items = current_user.feed.page(params[:page]).per(5)
   end
 
+  def show
+    @memo = Memo.find(params[:id])
+  end
+
   def new
     @memo = Memo.new
   end
@@ -12,10 +16,9 @@ class MemosController < ApplicationController
   def create
     @memo = Memo.new(memo_params)
     @memo.user_id = current_user.id
-    Rails.logger.debug "@memo : #{@memo.inspect}"
     if @memo.save
       flash[:success] = "離乳食が登録されました！"
-      redirect_to memos_path
+      redirect_to memo_path(@memo)
     else
       render 'memos/new'
     end
