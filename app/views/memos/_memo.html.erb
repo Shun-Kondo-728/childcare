@@ -1,0 +1,6 @@
+<li id="memo-<%= memo.id %>">
+  <span class="memo-name"><span class="round">●</span><%= link_to memo.name, memo_path(memo) %></span><br>
+  <span class="timestamp">
+    <%= time_ago_in_words(memo.created_at) %>前に投稿
+  </span>
+</li>

@@ -1,0 +1,19 @@
+<%= form_with model: @memo, local: true do |f| %>
+<div class="memo-block">
+  <div class="memo-group">
+    <h1 class="memo-title">離乳食メモ</h1>
+      <%= render "shared/error_messages", object: f.object %>   
+      <div class="field"> 
+        <%=f.label :name, "離乳食名"%>
+        <%=f.text_field :name, class: "form-control"%>
+      </div>         
+      <div class="field"> 
+        <%=f.label :description, "作り方"%>
+        <%=f.text_area :description, class: "form-control"%>
+      </div>
+      <div class="actions">  
+        <%=f.submit 'メモする', class: "btn btn-primary"%>
+      </div>
+  </div>
+</div>
+<% end %>

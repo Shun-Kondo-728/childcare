@@ -1,0 +1,7 @@
+<% provide(:title, '離乳食メモ') %>
+
+<div class="index-summary">
+<p class="m-memo"><%= link_to "メモする", new_memo_path, class: "btn btn-primary btn-lg btn-record1" %></p>
+    <h3 class="memo-title"> 離乳食名(<%= @feed_items.count %>)</h3>
+      <%= render 'shared/feed' %>
+</div>

@@ -225,6 +225,63 @@ footer {
     font-size: 30px;
   }
 
+  // memo
+.index-summary {
+    padding: 100px 0 10px 0;
+    .pagination {
+        padding-left: 35%;
+        margin: 100px 0;
+        font-size: 25px;
+    }
+    
+    .memo-title {
+        font-size: 40px;
+        padding: 100px 0 60px 0;
+        text-align: center;
+        font-weight: bold;
+        color: lightcoral;
+    }
+}
+
+.memo-name {
+    font-size: 25px;
+    display: inline-block;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.round {
+    padding-right: 15px;
+}
+
+.timestamp {
+    font-size: 20px;
+    color: cadetblue;
+    display: block;
+    padding-left: 50%;
+}
+
+.memos {
+    list-style: none;
+    margin-left: 5%;
+}
+
+.memos-name {
+    padding: 200px 0 70px 0;
+    font-size: 40px;
+    display: block;
+    word-break: break-all;
+}
+
+.memos-description {
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 400;
+    margin-bottom: 70px;
+    display: block;
+    word-break: break-all;
+}
+
 @media screen and (min-width: 768px) {
 // header
 header {
@@ -272,6 +329,106 @@ footer {
   }
 }
 
+// memo
+.index-summary {
+    .pagination {
+        padding-left: 35%;
+        font-size: 45px;
+    }
+    
+    .memo-title {
+        font-size: 60px;
+    }
+}
+
+.memo-name {
+    font-size: 50px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.timestamp {
+    font-size: 30px;
+    padding-left: 60%;
+}
+
+.memos {
+    margin-left: 10%;
+}
+
+.memo-block {
+    height: 3200px;
+    position: relative;
+
+    .form-control {
+      display: block;
+      width: 100%;
+      margin-bottom: 50px;
+      padding: 40px 0;
+    }
+
+    label {
+        max-width: 100%;
+        font-size: 50px;
+        padding: 25px 0 20px 0;
+    }
+
+    .actions {
+        text-align: center;
+      }
+      .btn-primary {
+        font-size: 65px;
+        width: 300px;
+        height: 150px;
+        color: #fff;
+        background-color: lightcoral;
+        border-color: lightcoral;
+        margin: 100px 0 30px 0;
+        border-radius: 20px;
+        padding: 20px;
+      }
+}
+
+.memo-group {
+    height: 900px;
+    width: 90%;
+    margin: 0;
+    border-radius: 30px;
+    background-color: #fff;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -45%);
+}
+
+.memo-title {
+    font-size: 70px;
+    padding-bottom: 100px;
+    text-align: center;
+    font-weight: bold;
+    color: lightcoral;
+}
+
+.m-memo {
+    text-align: center;
+    padding-top: 150px;
+    .btn-record1 {
+        padding: 40px;
+        font-size: 50px;
+        background-color: skyblue;
+        border-color: skyblue;
+    }
+}
+
+.memos-name {
+    font-size: 60px;
+}
+
+.memos-description {
+    font-size: 45px;
+    line-height: 70px;
+}
 @media screen and (min-width: 1024px) {
   
   // header
@@ -381,4 +538,71 @@ footer {
   .guide {
     font-size: 20px;
   }
+
+  .index-summary {
+      padding: 0;
+      .memo-title {
+        font-size: 45px;
+      }
+
+      .pagination {
+        padding-left: 44%;
+        font-size: 35px;
+    }
+  }
+
+  .memo-name {
+    font-size: 40px;
+  }
+
+  .timestamp {
+    font-size: 20px;
+}
+
+  .memos {
+    margin-left: 20%;
+  }
+
+  .memo-group {
+    top: 17%;
+}
+
+.memo-title {
+    font-size: 50px;
+}
+
+.memo-block {
+    height: 2300px;
+    label {
+    font-size: 40px;
+    }
+
+    .form-control {
+        padding: 20px 0;
+    }
+
+    .btn-primary {
+        font-size: 30px;
+        width: 50%;
+        padding: 20px;
+      }
+  }
+
+  .m-memo { 
+      padding-top: 0;
+      .btn-record1 {
+        padding: 15px 40px;
+        font-size: 40px;
+    }
+  }
+
+  .memos-name {
+    padding: 0 0 70px 0;
+    font-size: 60px;
+}
+
+  .memos-description {
+    font-size: 35px;
+    line-height: 70px;
+}
 }
