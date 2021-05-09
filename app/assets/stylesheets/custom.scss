@@ -198,6 +198,7 @@ footer {
       width: 80%;
       margin: 0 auto;
       padding: 40px 0;
+      font-size: 40px;
     }
     label {
       max-width: 100%;
@@ -267,7 +268,7 @@ footer {
 }
 
 .memos-name {
-    padding: 200px 0 70px 0;
+    padding-bottom: 60px;
     font-size: 40px;
     display: block;
     word-break: break-all;
@@ -365,6 +366,7 @@ footer {
       width: 100%;
       margin-bottom: 50px;
       padding: 40px 0;
+      font-size: 40px;
     }
 
     label {
@@ -429,6 +431,23 @@ footer {
     font-size: 45px;
     line-height: 70px;
 }
+
+.memo-edit-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 70px;
+    color: lightcoral;
+    padding: 100px;
+}
+
+.memo-show {
+    padding: 200px 0 70px 0;
+}
+
+.edit-memo {
+    font-size: 40px;
+}
+
 @media screen and (min-width: 1024px) {
   
   // header
@@ -521,6 +540,7 @@ footer {
     .form-control {
       width: 60%;
       padding: 5px 0;
+      font-size: 20px;
     }
     label {
       font-size: 20px;
@@ -579,6 +599,7 @@ footer {
 
     .form-control {
         padding: 20px 0;
+        font-size: 20px;
     }
 
     .btn-primary {
@@ -604,5 +625,18 @@ footer {
   .memos-description {
     font-size: 35px;
     line-height: 70px;
+}
+
+.memo-edit-title {
+    font-size: 40px;
+    padding: 10px 0 50px 0;
+}
+
+.memo-show {
+    padding: 0;
+}
+
+.edit-memo {
+    font-size: 30px;
 }
 }
