@@ -1,7 +1,7 @@
+<%= form_with model: @memo, local: true do |f| %>
 <div class="memo-block">
   <div class="memo-group">
     <h1 class="memo-title">離乳食メモ</h1>
-    <%= form_with model: @memo, local: true do |f| %>
       <%= render "shared/error_messages", object: f.object %>   
       <div class="field"> 
         <%=f.label :name, "離乳食名"%>
@@ -11,18 +11,9 @@
         <%=f.label :description, "作り方"%>
         <%=f.text_area :description, class: "form-control"%>
       </div>
-      <%= render partial: "description_form", locals: {f: f} %>
-      <%= render partial: "description_form", locals: {f: f} %>
-      <%= render partial: "description_form", locals: {f: f} %>
-      <%= render partial: "description_form", locals: {f: f} %>
-      <%= render partial: "description_form", locals: {f: f} %>
-      <%= render partial: "description_form", locals: {f: f} %>
-      <%= render partial: "description_form", locals: {f: f} %>
-      <%= render partial: "description_form", locals: {f: f} %>
-      <%= render partial: "description_form", locals: {f: f} %>
       <div class="actions">  
         <%=f.submit 'メモする', class: "btn btn-primary"%>
       </div>
-    <% end %>
   </div>
 </div>
+<% end %>

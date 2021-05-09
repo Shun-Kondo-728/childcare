@@ -23,10 +23,10 @@ RSpec.describe Memo, type: :model do
       expect(memo.errors[:name]).to include("は20文字以内で入力してください")
     end
 
-    it "作り方が60文字以内であること" do
-      memo = build(:memo, description: "あ" * 61)
+    it "作り方が700文字以内であること" do
+      memo = build(:memo, description: "あ" * 701)
       memo.valid?
-      expect(memo.errors[:description]).to include("は60文字以内で入力してください")
+      expect(memo.errors[:description]).to include("は700文字以内で入力してください")
     end
 
     it "ユーザーIDがなければ無効な状態であること" do
