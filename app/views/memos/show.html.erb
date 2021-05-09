@@ -2,6 +2,11 @@
 
 <div class="container">
   <div class="memo-show">
+    <div class="change-memo">
+      <% if current_user == @memo.user %>
+        <%= link_to "編集", edit_memo_path(@memo), class: 'edit-memo' %>　
+      <% end %>
+    </div>
     <h2 class="memos-name"><%= @memo.name %></h2>
     <h4 class="memos-description"><%= simple_format(@memo.description) %></h4>
   </div>

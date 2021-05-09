@@ -1,0 +1,27 @@
+<% provide(:title, "離乳食メモの編集") %>
+
+<div class="signup-block">
+  <div class="signup-group">
+    <h1 class="memo-edit-title">離乳食メモの編集</h1>
+    <%= form_with model: @memo, local: true do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+      <div class="field"> 
+        <%=f.label :name, "離乳食名"%>
+        <%=f.text_field :name, class: "form-control"%>
+      </div>  
+      <div class="field"> 
+        <%=f.label :description, "作り方"%>
+        <%=f.text_area :description, class: "form-control"%>
+      </div>  
+
+      <div class="actions">  
+        <%=f.submit '更新する', class: "btn btn-primary"%>
+      </div>
+
+      <div class="memo-delete">
+        <%= link_to "離乳食メモを削除する", memo_path(@memo), method: :delete,
+                             data: { confirm: "本当にこの離乳食メモを削除してもよろしいですか？" } %>
+      </div>  
+    <% end %>
+  </div>
+</div>
