@@ -448,6 +448,12 @@ footer {
     font-size: 40px;
 }
 
+.memo-delete {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 50px;
+}
+
 @media screen and (min-width: 1024px) {
   
   // header
@@ -638,5 +644,9 @@ footer {
 
 .edit-memo {
     font-size: 30px;
+}
+
+.memo-delete {
+    font-size: 20px;
 }
 }

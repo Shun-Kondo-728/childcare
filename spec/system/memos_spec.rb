@@ -119,5 +119,13 @@ RSpec.describe "Memos", type: :system do
         expect(memo.reload.name).not_to eq ""
       end
     end
+
+    context "離乳食メモの削除処理", js: true do
+      it "削除成功のフラッシュが表示されること" do
+        click_on '削除'
+        page.driver.browser.switch_to.alert.accept
+        expect(page).to have_content '離乳食メモが削除されました'
+      end
+    end
   end
 end
