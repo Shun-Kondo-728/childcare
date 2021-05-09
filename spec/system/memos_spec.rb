@@ -83,4 +83,41 @@ RSpec.describe "Memos", type: :system do
       end
     end
   end
+
+  describe "料理編集ページ" do
+    before do
+      login_for_system(user)
+      visit memo_path(memo)
+      click_link "編集"
+    end
+
+    context "ページレイアウト" do
+      it "正しいタイトルが表示されること" do
+        expect(page).to have_title full_title('離乳食メモの編集')
+      end
+
+      it "入力部分に適切なラベルが表示されること" do
+        expect(page).to have_content '離乳食名'
+        expect(page).to have_content '使い方'
+      end
+    end
+
+    context "離乳食メモの更新処理" do
+      it "有効な更新" do
+        fill_in "離乳食名", with: "編集：離乳食名"
+        fill_in "作り方", with: "編集：ここをこうやって作ります。"
+        click_button "更新する"
+        expect(page).to have_content "離乳食メモ情報が更新されました！"
+        expect(memo.reload.name).to eq "編集：離乳食名"
+        expect(memo.reload.description).to eq "編集：ここをこうやって作ります。"
+      end
+
+      it "無効な更新" do
+        fill_in "離乳食名", with: ""
+        click_button "更新する"
+        expect(page).to have_content '離乳食名を入力してください'
+        expect(memo.reload.name).not_to eq ""
+      end
+    end
+  end
 end
