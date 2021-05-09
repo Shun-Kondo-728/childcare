@@ -24,6 +24,20 @@ class MemosController < ApplicationController
     end
   end
 
+  def edit
+    @memo = Memo.find(params[:id])
+  end
+
+  def update
+    @memo = Memo.find(params[:id])
+    if @memo.update_attributes(memo_params)
+      flash[:success] = "離乳食メモ情報が更新されました！"
+      redirect_to @memo
+    else
+      render 'edit'
+    end
+  end
+
   private
 
     def memo_params
