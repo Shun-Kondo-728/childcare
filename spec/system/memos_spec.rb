@@ -127,5 +127,45 @@ RSpec.describe "Memos", type: :system do
         expect(page).to have_content '離乳食メモが削除されました'
       end
     end
+
+    context "検索機能" do
+      context "ログインしている場合" do
+        before do
+          login_for_system(user)
+          visit memo_search_path
+        end
+
+        it "ログイン後の各ページに検索窓が表示されていること" do
+          expect(page).to have_css 'form#memo_search'
+        end
+
+        it "フィードの中から検索ワードに該当する結果が表示されること" do
+          create(:memo, name: 'ミルク', user: user)
+
+          fill_in 'q_name_cont', with: 'ミル'
+          click_button '検索'
+          expect(page).to have_css 'h3', text: "”ミル”の検索結果：1件"
+          within find('.memos') do
+            expect(page).to have_css 'li', count: 1
+          end
+        end
+
+        it "検索ワードを入れずに検索ボタンを押した場合、一覧が表示されること" do
+          fill_in 'q_name_cont', with: ''
+          click_button '検索'
+          expect(page).to have_css 'h3', text: "離乳食メモ一覧"
+          within find('.memos') do
+            expect(page).to have_css 'li', count: Memo.count
+          end
+        end
+      end
+
+      context "ログインしていない場合" do
+        it "検索窓が表示されないこと" do
+          visit root_path
+          expect(page).not_to have_css 'form#memo_search'
+        end
+      end
+    end
   end
 end

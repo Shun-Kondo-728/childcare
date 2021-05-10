@@ -16,6 +16,7 @@ gem 'bootstrap-sass'
 gem 'faker'
 gem 'kaminari'
 gem 'simple_calendar', '~> 2.0'
+gem 'ransack'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
