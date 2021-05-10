@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  has_many :posts, dependent: :destroy
+  has_many :memos, dependent: :destroy
+  has_many :calenders
   validates :name, presence: true, length: { maximum: 30 },
                    uniqueness: { case_sensitive: false }
   has_secure_password
