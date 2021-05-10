@@ -1,0 +1,28 @@
+<% provide(:title, "離乳食メモの編集") %>
+
+<div class="signup-block">
+  <div class="signup-group">
+    <h1 class="memo-edit-title">離乳食メモの編集</h1>
+    <%= form_with(model: @calendar, url: calendar_path,local: true) do |f| %>
+
+    <div class="field">
+      <%= f.label :start_time, "メモする日付" %>
+      <%= f.date_field :start_time, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :name, "離乳食名" %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+
+      <div class="actions">  
+        <%=f.submit '更新する', class: "btn btn-primary"%>
+      </div>
+
+      <div class="memo-delete">
+        <%= link_to "離乳食メモを削除する", calendar_path(@calendar), method: :delete,
+                             data: { confirm: "本当にこの離乳食メモを削除してもよろしいですか？" } %>
+      </div>  
+    <% end %>
+  </div>
+</div>

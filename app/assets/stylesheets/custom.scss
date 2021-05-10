@@ -293,6 +293,11 @@ header {
     }
 }
 
+.navbar {
+    border-radius: 4px;
+    margin-bottom: 300px;
+}
+
  #logo  {
   float: left;
 }
@@ -456,9 +461,16 @@ footer {
 
 // calendar
 .memo-go {
-    padding-top: 200px;
     display: block;
+    text-align: center;
     font-size: 50px;
+    color: white;
+    background-color: lightcoral;
+    margin-bottom: 100px;
+}
+
+.simple-calendar {
+    margin-bottom: 500px;
 }
 
 .calendar-heading {
@@ -467,6 +479,19 @@ footer {
     padding-bottom: 40px;
 }
 
+.calendar-group {
+    top: 17%;
+}
+
+.calendar-name {
+    font-size: 50px;
+    padding-left: 20%;
+}
+
+.edit-calendar {
+    font-size: 40px;
+    padding-left: 20%;
+}
 @media screen and (min-width: 1024px) {
   
   // header
@@ -661,5 +686,35 @@ footer {
 
 .memo-delete {
     font-size: 20px;
+}
+
+// calendar
+.table.table.table-striped {
+    font-size: 30px;
+}
+
+.navbar {
+    border-radius: 4px;
+    margin-bottom: 50px;
+}
+
+.memo-go {
+    font-size: 40px;
+}
+
+.simple-calendar {
+    margin-bottom: 200px;
+}
+
+.calendar-group {
+    top: 60%;
+}
+
+.calendar-name {
+    font-size: 40px;
+}
+
+.edit-calendar {
+    font-size: 30px;
 }
 }

@@ -1,5 +1,10 @@
 <% provide(:title, '離乳食メモ内容') %>
 
-<div class="memo-show">
-  <h4 class="memo-name"><%= @calendar.name %></h4>
+<div class="calendar-show">
+  <div class="change-memo">
+      <% if current_user == @calendar.user %>
+        <%= link_to "編集", edit_calendar_path(@calendar), class: 'edit-calendar' %>
+      <% end %>
+    </div>
+  <h4 class="calendar-name"><%= @calendar.name %></h4>
 </div>

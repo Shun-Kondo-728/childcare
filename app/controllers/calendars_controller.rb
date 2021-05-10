@@ -24,8 +24,14 @@ class CalendarsController < ApplicationController
 
   def destroy
     @calendar = Calendar.find(params[:id])
-    @calendar.destroy
-    redirect_to calendars_path, notice: "削除しました"
+    if current_user?(@calendar.user)
+      @calendar.destroy
+      flash[:success] = "離乳食メモが削除されました"
+      redirect_to request.referrer == user_url(@calendar.user) ? user_url(@calendar.user) : calendars_url
+    else
+      flash[:danger] = "他のアカウントの離乳食メモは削除できません"
+      redirect_to root_url
+    end
   end
 
   def edit
@@ -34,8 +40,9 @@ class CalendarsController < ApplicationController
 
   def update
     @calendar = Calendar.find(params[:id])
-    if @calendar.update(calendar_params)
-      redirect_to calendars_path, notice: "編集しました"
+    if @calendar.update_attributes(calendar_params)
+      flash[:success] = "離乳食メモ情報が更新されました！"
+      redirect_to @calendar
     else
       render 'edit'
     end
