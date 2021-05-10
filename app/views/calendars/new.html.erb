@@ -1,0 +1,23 @@
+<div class="signup-block">
+  <div class="memo-group">
+    <h1 class="memo-title">離乳食メモ</h1>
+    <%= form_with(model: @calendar, url: calendars_path,local: true) do |f| %>
+
+    <div class="field">
+      <%= f.label :start_time, "メモする日付" %>
+      <%= f.date_field :start_time, class: "form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :name, "離乳食名" %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+
+
+    <div class="actions">
+      <%= f.submit 'メモする', class: "btn btn-primary" ,url: calendars_path ,method: :post%>
+    </div>
+
+  <% end %>
+  </div>
+</div>

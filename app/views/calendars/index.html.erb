@@ -1,0 +1,11 @@
+<%= link_to 'メモする', new_calendar_path, class: "memo-go" %>
+
+<%= month_calendar events: @calendars do |date, calendars| %>
+  <%= date.day %>
+
+  <% calendars.each do |calendar| %>
+    <div>
+      <%= link_to calendar.name, calendar %>
+    </div>
+  <% end %>
+<% end %>
