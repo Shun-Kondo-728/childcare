@@ -1,8 +1,10 @@
 class MemosController < ApplicationController
   before_action :logged_in_user
+  before_action :set_search
 
   def index
     @feed_items = current_user.feed.page(params[:page]).per(5)
+    @memo = Memo.new
   end
 
   def show
@@ -54,5 +56,14 @@ class MemosController < ApplicationController
 
     def memo_params
       params.require(:memo).permit(:name, :description)
+    end
+
+    def set_search
+      if logged_in?
+        @search = params[:q][:name_cont] if params[:q]
+        @q = current_user.feed.page(params[:page]).per(10).ransack(params[:q])
+        @feed_items = current_user.feed.page(params[:page]).per(10)
+        @memos = @q.result(distinct: true)
+      end
     end
 end

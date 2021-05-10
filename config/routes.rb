@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get :about, to: 'static_pages#about'
   get :signup,       to: 'users#new'
+  get :memo_search, to: 'memos#memo_search'
   resources :users
   resources :memos
   resources :calendars
