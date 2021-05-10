@@ -38,3 +38,15 @@ Style/MixinUsage:
 
 Style/MutableConstant:
   Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Rails/HelperInstanceVariable:
+  Enabled: false
+
+Airbnb/DefaultScope:
+  Enabled: false
+
+RSpec/EmptyExampleGroup:
+  Enabled: false

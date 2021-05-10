@@ -27,7 +27,7 @@ RSpec.describe "Memos", type: :request do
     it "無効なデータでは登録できないこと" do
       expect {
         post memos_path, params: { memo: { name: "",
-                                           description: "ここをこうやって作ります。"} }
+                                           description: "ここをこうやって作ります。" } }
       }.not_to change(Memo, :count)
       expect(response).to render_template('memos/new')
     end
