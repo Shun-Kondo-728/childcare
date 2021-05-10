@@ -541,6 +541,75 @@ input.btn.btn-primary {
     font-size: 25px;
   }
 }
+
+// requruit
+
+.requruit-page {
+  width: 100%;
+}
+
+.description-form {
+  margin: 50px 0;
+  text-align: center;
+  font-size: 35px;
+}
+
+.recruit-account {
+  margin: 20px 0 50px 0;
+  text-align: center;
+  font-size: 30px;
+}
+
+.requruit-block {
+  height: 1800px;
+  position: relative; 
+  .signup-group {
+    height: 1300px;
+    width: 90%;
+    margin: 0;
+    border-radius: 30px;
+    background-color: linen;
+    border: solid 3px darkcyan;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -45%);
+}
+.title-form {
+  font-weight: bold;
+  margin: 100px 0 50px 0;
+  text-align: center;
+  font-size: 40px;
+}
+  .form-control {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 40px;
+  }
+  label {
+    max-width: 100%;
+    font-size: 50px;
+    padding: 25px 0 20px 80px;
+  }
+  .actions {
+    text-align: center;
+  }
+  .btn-requruit {
+      font-size: 35px;
+      width: 300px;
+      height: 400px;
+      color: white;
+      background-color: darkcyan;
+      border-color: darkcyan;
+      margin: 70px 0 30px 0;
+      border-radius: 20px;
+      padding: 20px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   
   // header
@@ -807,6 +876,45 @@ input.btn.btn-primary {
   .pagination {
     padding-left: 44%;
     font-size: 35px;
+  }
 }
+
+// requruit
+.description-form {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.recruit-account {
+  font-size: 20px;
+}
+
+.requruit-block {
+  height: 1000px;
+  position: relative; 
+  .signup-group {
+    height: 900px;
+    width: 700px;
+    transform: translate(-50%, -38%);
+  }
+  .title-form {
+    font-size: 30px;
+  }
+  .form-control {
+    width: 60%;
+    padding: 5px 0;
+    font-size: 25px;
+  }
+  label {
+    font-size: 20px;
+    padding: 15px 0 10px 130px;
+  }
+  .btn-requruit {
+    font-size: 25px;
+    width: 300px;
+    margin-top: 40px;
+    padding: 0;
+  }
 }
 }
