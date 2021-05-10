@@ -1,5 +1,6 @@
 <% provide(:title, '離乳食名検索一覧') %>
 
+<%= link_to '<<戻る', memos_path, class: "back-link" %>
 <div id="searchs">
     <div class="memo-search-area">
       <%= render 'memos/search' if logged_in? %>
