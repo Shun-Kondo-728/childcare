@@ -1,5 +1,6 @@
 <% provide(:title, '離乳食メモ') %>
 
+<%= link_to '<<戻る', root_path, class: "back-link" %>
 <div class="index-summary">
 <%= render 'memos/search' if logged_in? %>
 <p class="m-memo"><%= link_to "メモする", new_memo_path, class: "btn btn-primary btn-lg btn-record1" %></p>

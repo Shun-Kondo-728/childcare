@@ -1,7 +1,8 @@
 <% provide(:title, '離乳食メモ内容') %>
 
+<%= link_to '<<戻る', calendars_path, class: "back-link" %>
 <div class="calendar-show">
-  <div class="change-memo">
+  <div class="change-calendar">
       <% if current_user == @calendar.user %>
         <%= link_to "編集", edit_calendar_path(@calendar), class: 'edit-calendar' %>
       <% end %>

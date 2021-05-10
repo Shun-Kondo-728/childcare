@@ -244,6 +244,12 @@ footer {
     }
 }
 
+.back-link {
+  font-size: 20px;
+  padding-top: 150px;
+  display: block;
+}
+
 .memo-name {
     font-size: 25px;
     display: inline-block;
@@ -363,7 +369,7 @@ footer {
 }
 
 .memo-block {
-    height: 3200px;
+    height: 2000px;
     position: relative;
 
     .form-control {
@@ -486,11 +492,16 @@ footer {
 .calendar-name {
     font-size: 50px;
     padding-left: 20%;
+    padding-bottom: 100px;
 }
 
 .edit-calendar {
     font-size: 40px;
     padding-left: 20%;
+}
+
+.change-calendar {
+  padding-top: 150px;
 }
 
 // search
@@ -518,6 +529,18 @@ input.btn.btn-primary {
   padding-bottom: 100px;
 }
 
+.back-link {
+  font-size: 40px;
+  padding-top: 0;
+}
+
+#searchs {
+  .pagination {
+    padding-left: 35%;
+    margin: 100px 0;
+    font-size: 25px;
+  }
+}
 @media screen and (min-width: 1024px) {
   
   // header
@@ -629,6 +652,7 @@ input.btn.btn-primary {
     font-size: 20px;
   }
 
+// memo
   .index-summary {
       padding: 0;
       .memo-title {
@@ -640,6 +664,12 @@ input.btn.btn-primary {
         font-size: 35px;
     }
   }
+
+  .back-link {
+    font-size: 30px;
+    padding-bottom: 30px;
+    padding-top: 0;
+}
 
   .memo-name {
     font-size: 40px;
@@ -662,7 +692,8 @@ input.btn.btn-primary {
 }
 
 .memo-block {
-    height: 2300px;
+  height: 800px;
+  margin-top: 200px;
     label {
     font-size: 40px;
     }
@@ -744,6 +775,10 @@ input.btn.btn-primary {
     font-size: 30px;
 }
 
+.change-calendar {
+  padding-top: 50px;
+}
+
 // search
 .memo-search {
   padding-top: 180px;
@@ -766,5 +801,12 @@ input.btn.btn-primary {
 .memo-search-area {
   width: 80%;
   margin-left: 20%;
+}
+
+#searchs {
+  .pagination {
+    padding-left: 44%;
+    font-size: 35px;
+}
 }
 }
