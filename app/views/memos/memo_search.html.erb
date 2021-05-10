@@ -2,13 +2,15 @@
 
 <div id="searchs">
     <div class="memo-search-area">
-    <%= render 'memos/search' if logged_in? %>
+      <%= render 'memos/search' if logged_in? %>
     </div>
-    <% if @search.present? %>
-      <h3 class="search-case"><span class="square">■</span>”<%= @search %>”の検索結果：<%= @memos.count %>件</h3>
-    <% else %>
-      <h3 class="search-case"><span class="square">■</span>悩み投稿一覧</h3>
-    <% end %>
+    <div class="memo-search">
+      <% if @search.present? %>
+        <h3 class="search-case"><span class="square">■</span>”<%= @search %>”の検索結果：<%= @memos.count %>件</h3>
+      <% else %>
+        <h3 class="search-case"><span class="square">■</span>離乳食メモ一覧</h3>
+      <% end %>
+    </div>
     <ul class="memos">
       <%= render @memos %>
     </ul>
