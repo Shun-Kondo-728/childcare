@@ -1,6 +1,8 @@
 class CalendarsController < ApplicationController
+  before_action :logged_in_user
+
   def index
-    @calendars = Calendar.all
+    @calendars = current_user.calendars
   end
 
   def new
